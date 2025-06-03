@@ -1,2 +1,13 @@
-const CamperDetails = () => <h1>Camper Details Page</h1>;
+import Layout from '../../components/Layout/Layout';
+
+const CamperDetails = () => {
+  return (
+    <Layout>
+      <div>
+
+      </div>
+    </Layout>
+  );
+};
+
 export default CamperDetails;

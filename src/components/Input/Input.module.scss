@@ -2,12 +2,26 @@
   position: relative;
   display: flex;
   align-items: center;
+
+  &.withValue {
+    .input {
+      color: $color-black;
+    }
+
+    .icon svg path {
+      fill: $color-black;
+    }
+  }
+
+  &.withIcon .input {
+    padding-left: 52px;
+  }
 }
 
 .input {
   width: 100%;
   height: 60px;
-  padding: 18px;
+  padding: 20px;
   border: 1px solid $color-gray-background;
   border-radius: 8px;
   font-size: 16px;
@@ -34,7 +48,7 @@ textarea.input {
 
 .icon {
   position: absolute;
-  left: 12px;
+  left: 20px;
   display: flex;
   align-items: center;
   pointer-events: none;

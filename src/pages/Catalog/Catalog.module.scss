@@ -1,0 +1,88 @@
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  padding: 0 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
+.left {
+  width: 360px;
+}
+
+.locationText {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-gray-dark;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.filterText {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-gray-dark;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.filterSection {
+  margin-bottom: 32px;
+
+  .filterSectionTitle {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background: $color-gray-light;
+    margin: 24px 0;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .filterItem {
+    width: 112px;
+    height: 96px;
+    border: 1px solid $color-gray-light;
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid $color-red;
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+}
+
+.right {
+  width: calc(100% - 424px);
+}

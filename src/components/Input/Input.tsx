@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import DatePicker from 'react-datepicker';
 import { enUS } from 'date-fns/locale';
+import classNames from 'classnames';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './DatePicker.scss';
@@ -24,7 +25,11 @@ const Input = ({
   icon,
 }: IInput) => {
   const [open, setOpen] = useState(false);
-  const inputWrapperClass = `${styles.inputWrapper} ${isValid ? '' : styles.invalid}`;
+  const inputWrapperClass = classNames(styles.inputWrapper, {
+    [styles.isValid]: isValid,
+    [styles.withValue]: !!value,
+    [styles.withIcon]: !!icon,
+  });
 
   const renderInput = (inputProps: any) => (
     <div className={inputWrapperClass}>
@@ -36,7 +41,7 @@ const Input = ({
   if (type === 'textarea') {
     return renderInput(
       <textarea
-        className={styles.input}
+        className={classNames(styles.input, !!icon && styles.withIcon)}
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -65,7 +70,7 @@ const Input = ({
           customInput={
             <div className={styles.dateInputWrapper} onClick={() => setOpen(true)}>
               <input
-                className={styles.input}
+                className={classNames(styles.input, !!icon && styles.withIcon)}
                 value={value}
                 disabled
               />
