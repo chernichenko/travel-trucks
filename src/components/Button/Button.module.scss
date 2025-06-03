@@ -1,0 +1,33 @@
+.button {
+  width: 166px;
+  height: 56px;
+  border-radius: 200px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.5%;
+  font-weight: 500;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.2s linear;
+
+  &.primary {
+    background: $color-red;
+    border-color: $color-red;
+    color: $color-white;
+
+    &:hover {
+      background: $color-red-dark;
+      border-color: $color-red-dark;
+    }
+  }
+
+  &.white {
+    background: $color-white;
+    border-color: $color-gray-light;
+    color: $color-black;
+
+    &:hover {
+      border-color: $color-red-dark;
+    }
+  }
+}
