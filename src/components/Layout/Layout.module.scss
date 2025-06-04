@@ -1,3 +1,16 @@
 .layout {
   padding-top: 72px;
 }
+
+.mobileMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #333;
+}
