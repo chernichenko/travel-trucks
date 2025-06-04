@@ -72,6 +72,7 @@ const Input = ({
               <input
                 className={classNames(styles.input, !!icon && styles.withIcon)}
                 value={value}
+                placeholder={placeholder}
                 disabled
               />
             </div>

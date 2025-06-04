@@ -36,6 +36,23 @@
   font-weight: 600;
 }
 
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .favorite {
+    cursor: pointer;
+    line-height: 0;
+
+    &.active {
+      svg path {
+        fill: $color-red;
+      }
+    }
+  }
+}
+
 .meta {
   display: flex;
   gap: 16px;
@@ -52,6 +69,10 @@
     line-height: 1;
     display: flex;
     align-items: center;
+  }
+
+  .rating span {
+    text-decoration: underline;
   }
 
   .rating svg path {
@@ -73,32 +94,6 @@
     white-space: nowrap;
     display: block;
     width: 100%;
-  }
-}
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 24px;
-
-  .feature {
-    height: 48px;
-    display: flex;
-    align-items: center;
-    background-color: #f3f4f6;
-    border-radius: 100px;
-    padding: 4px 18px;
-    font-size: 16px;
-    color: $color-black;
-    background: $color-gray-lighter;
-    gap: 8px;
-    text-transform: capitalize;
-
-    svg {
-      width: 20px;
-      height: auto;
-    }
   }
 }
 
