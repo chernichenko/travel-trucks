@@ -45,6 +45,19 @@ const CamperDetails = () => {
     }
   }, [id]);
 
+  const onSubmit = () => {
+    if (name && isNameValid && email && isEmailValid && date && isDateValid && isMessageValid) {
+      alert('You have successfully booked a campervan. We will contact you shortly.');
+      setName('');
+      setIsNameValid(true);
+      setEmail('');
+      setIsEmailValid(true);
+      setDate('');
+      setIsDateValid(true);
+      setMessage('');
+    }
+  }
+
   if (loading) {
     return <Loader />;
   }
@@ -210,7 +223,11 @@ const CamperDetails = () => {
           </div>
 
           <div className={styles.button}>
-            <Button>Send</Button>
+            <Button
+              onClick={onSubmit}
+            >
+              Send
+            </Button>
           </div>
         </div>
       </div>

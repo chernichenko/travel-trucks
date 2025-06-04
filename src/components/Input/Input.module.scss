@@ -13,6 +13,12 @@
     }
   }
 
+  &.withError {
+    .input {
+      border: 1px solid $color-red;
+    }
+  }
+
   &.withIcon .input {
     padding-left: 52px;
   }

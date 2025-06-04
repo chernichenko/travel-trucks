@@ -26,7 +26,7 @@ const Input = ({
 }: IInput) => {
   const [open, setOpen] = useState(false);
   const inputWrapperClass = classNames(styles.inputWrapper, {
-    [styles.isValid]: isValid,
+    [styles.withError]: !isValid,
     [styles.withValue]: !!value,
     [styles.withIcon]: !!icon,
   });
